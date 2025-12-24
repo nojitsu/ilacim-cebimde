@@ -1,0 +1,62 @@
+name: ilacim_cebimde
+description: İlaç hatırlatma ve takip uygulaması
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.2.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+
+  # Firebase Paketleri
+  firebase_core: ^3.9.0
+  firebase_auth: ^5.3.2
+  cloud_firestore: ^5.4.6
+
+  # Bildirimler
+  flutter_local_notifications: ^18.0.1
+
+  # Tarih işlemleri
+  timezone: ^0.9.4
+  intl: ^0.20.2
+
+  # Durum yönetimi
+  provider: ^6.1.2
+
+  # Takvim
+  table_calendar: ^3.1.2
+
+  # Resim seçici (profil fotoğrafı için)
+  image_picker: ^1.0.7
+
+  # Yerelleştirme
+  flutter_localizations:
+    sdk: flutter
+  file_picker: ^10.3.7
+  audioplayers: ^6.5.1
+  path_provider: ^2.1.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "ilacım_cebimde_logo.png"
+  min_sdk_android: 21
+
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/
+    - assets/sounds/

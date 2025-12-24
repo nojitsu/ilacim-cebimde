@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İlacım Cebimde - Proje Posteri</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2196F3;
+            --secondary-color: #0D47A1;
+            --accent-color: #E3F2FD;
+            --text-color: #333;
+            --bg-color: #fff;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .poster-container {
+            width: 210mm;
+            /* A4 width */
+            height: 297mm;
+            /* A4 height */
+            background-color: var(--bg-color);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            padding: 15mm;
+            box-sizing: border-box;
+            overflow: hidden;
+            /* Ensure content fits */
+            position: relative;
+        }
+
+        /* Header Section */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .logo-area {
+            width: 80px;
+            height: 80px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        .title-area {
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        h1 {
+            margin: 0;
+            color: var(--secondary-color);
+            font-size: 28pt;
+            text-transform: uppercase;
+        }
+
+        .team-area {
+            text-align: right;
+            font-size: 10pt;
+        }
+
+        /* Content Layout */
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            flex-grow: 1;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        section {
+            background-color: var(--accent-color);
+            padding: 10px;
+            border-radius: 8px;
+            border-left: 5px solid var(--primary-color);
+        }
+
+        h2 {
+            margin-top: 0;
+            color: var(--secondary-color);
+            font-size: 14pt;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+
+        p,
+        li {
+            font-size: 9pt;
+            line-height: 1.4;
+            text-align: justify;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin: 5px 0;
+        }
+
+        /* Flow Diagram Styling */
+        .flow-diagram {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            margin-top: 10px;
+        }
+
+        .flow-box {
+            border: 2px solid var(--primary-color);
+            background: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 8pt;
+            font-weight: bold;
+            width: 80%;
+            text-align: center;
+        }
+
+        .arrow {
+            font-size: 12pt;
+            color: var(--secondary-color);
+        }
+
+        /* Footer/Results */
+        .results-section {
+            margin-top: auto;
+            /* Push to bottom if needed, or stay in flow */
+        }
+
+        @media print {
+            body {
+                background: none;
+                -webkit-print-color-adjust: exact;
+            }
+
+            .poster-container {
+                width: 100%;
+                height: 100%;
+                box-shadow: none;
+                margin: 0;
+                padding: 10mm;
+                page-break-after: always;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="poster-container" id="poster">
+        <header>
+            <div class="logo-area">İC</div>
+            <div class="title-area">
+                <div style="font-size: 12pt; font-weight: bold; color: #0D47A1; margin-bottom: 5px;">UŞAK ÜNİVERSİTESİ -
+                    BİLGİSAYAR PROGRAMCILIĞI</div>
+                <h1>İLACIM CEBİMDE</h1>
+                <div style="font-size: 14pt; color: #555;">Akıllı İlaç Takip Sistemi</div>
+            </div>
+            <div class="team-area">
+                <strong>Ekip Üyeleri:</strong><br>
+                Ali YILDIRIM<br>
+                Mahmut KARAARSLAN<br>
+                <br>
+                <strong>Danışman:</strong><br>
+                Öğr. Gör. Merve GENEL
+            </div>
+        </header>
+
+        <div class="content">
+            <!-- Left Column -->
+            <div class="column">
+                <section>
+                    <h2>Özet</h2>
+                    <p>
+                        "İlacım Cebimde", kronik rahatsızlığı olan veya düzenli ilaç kullanan bireylerin, ilaç alma
+                        zamanlarını aksatmamaları ve tedavilerini düzenli sürdürebilmeleri için geliştirilmiş mobil
+                        tabanlı bir hatırlatma sistemidir. Uygulama, kullanıcı dostu arayüzü ile ilaç takibini
+                        kolaylaştırır.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Giriş</h2>
+                    <p>
+                        Günümüzde sağlık yönetiminin kişiselleşmesi ve mobil teknolojilerin yaygınlaşması ile birlikte,
+                        hastaların tedavi süreçlerine uyumu kritik bir önem kazanmıştır. Unutulan ilaç dozları,
+                        tedavinin başarısız olmasına yol açabilir. Bu proje, bu soruna teknolojik ve pratik bir çözüm
+                        getirmeyi amaçlamaktadır.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Yöntem</h2>
+                    <p>
+                        Proje, çevik yazılım geliştirme metodolojileri kullanılarak geliştirilmiştir.
+                        Mobil uygulama için <strong>Flutter</strong> framework'ü tercih edilmiş, veri saklama ve kimlik
+                        doğrulama işlemleri için <strong>Google Firebase</strong> altyapısı kullanılmıştır.
+                        Yerel bildirimler (Local Notifications) servisi ile internet bağlantısı olmasa dahi kullanıcıya
+                        zamanında hatırlatma yapılması sağlanmıştır.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Kullanılan Teknolojiler</h2>
+                    <ul>
+                        <li><strong>Dil:</strong> Dart</li>
+                        <li><strong>Framework:</strong> Flutter (Mobil Arayüz)</li>
+                        <li><strong>Backend:</strong> Firebase (Auth, Firestore)</li>
+                        <li><strong>Yerel Veri/Bildirim:</strong> flutter_local_notifications</li>
+                        <li><strong>Durum Yönetimi:</strong> Provider</li>
+                        <li><strong>Diğer:</strong> Table Calendar, Image Picker</li>
+                    </ul>
+                </section>
+            </div>
+
+            <!-- Right Column -->
+            <div class="column">
+                <section>
+                    <h2>Uygulama Arayüzü</h2>
+                    <p>Uygulamanın temel ekranları kullanıcı deneyimi ön planda tutularak tasarlanmıştır.</p>
+                    <div
+                        style="display: flex; gap: 10px; justify-content: space-around; margin-top: 10px; flex-wrap: wrap;">
+                        <div style="display: flex; flex-direction: column; align-items: center; width: 22%;">
+                            <img src="giris_ekranı_ilacım_cebimde.png" alt="Giriş Ekranı"
+                                style="width: 100%; border: 1px solid #ccc; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                            <span style="font-size: 8pt; margin-top: 5px; color: #555; text-align: center;">Giriş
+                                Ekranı</span>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center; width: 22%;">
+                            <img src="ANA_EKRAN_ilacim_cebimde.png" alt="Ana Sayfa"
+                                style="width: 100%; border: 1px solid #ccc; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                            <span style="font-size: 8pt; margin-top: 5px; color: #555; text-align: center;">Ana
+                                Sayfa</span>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center; width: 22%;">
+                            <img src="takvim_ekranı_ilacım_cebimde.png" alt="Takvim"
+                                style="width: 100%; border: 1px solid #ccc; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                            <span
+                                style="font-size: 8pt; margin-top: 5px; color: #555; text-align: center;">Takvim</span>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: center; width: 22%;">
+                            <img src="ilaç_ekleme_ekranı_ilacım_cebimde.png" alt="İlaç Ekleme"
+                                style="width: 100%; border: 1px solid #ccc; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                            <span style="font-size: 8pt; margin-top: 5px; color: #555; text-align: center;">İlaç
+                                Ekleme</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Sistem Tasarımı & Akış</h2>
+                    <div class="flow-diagram">
+                        <div class="flow-box">Kullanıcı Girişi (Firebase Auth)</div>
+                        <div class="arrow">↓</div>
+                        <div class="flow-box">Ana Ekran (Takvim & Özet)</div>
+                        <div class="arrow">↓</div>
+                        <div class="flow-box" style="display:flex; justify-content:space-around; width:90%;">
+                            <span>İlaç Ekleme</span> ↔ <span>Bildirim Kurulumu</span>
+                        </div>
+                        <div class="arrow">↓</div>
+                        <div class="flow-box">Bulut Veritabanı (Firestore)</div>
+                        <div class="arrow">↓</div>
+                        <div class="flow-box">Hatırlatma Bildirimi (Sesli/Görsel)</div>
+                    </div>
+                    <p style="margin-top: 10px;">
+                        Kullanıcı sisteme giriş yaptıktan sonra ilaçlarını adı, dozu ve saati ile sisteme kayder.
+                        Sistem, arka planda bildirimleri zamanlar ve veritabanına yedekler.
+                    </p>
+                </section>
+
+                <section class="results-section">
+                    <h2>Sonuçlar</h2>
+                    <p>
+                        Geliştirilen "İlacım Cebimde" uygulaması ile:
+                    </p>
+                    <ul>
+                        <li>Kullanıcılar ilaçlarını zamanında alabilmekte,</li>
+                        <li>Geçmişe dönük ilaç kullanım raporlarına erişebilmekte,</li>
+                        <li>Tedavi süreçlerini daha disiplinli yönetebilmektedir.</li>
+                    </ul>
+                    <p>
+                        Testler sonucunda bildirim mekanizmasının kararlı çalıştığı ve arayüzün her yaş grubu tarafından
+                        kolayca kullanılabildiği gözlemlenmiştir.
+                    </p>
+                </section>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "965606173654",
+    "project_id": "ilac-cebimde",
+    "storage_bucket": "ilac-cebimde.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:965606173654:android:ff9f3818c6b7990e70d277",
+        "android_client_info": {
+          "package_name": "com.example.ilac_cebimde"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyM8KjuerB6duA8UP2OBThHjQUX18gBPw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:965606173654:android:071a494f27d64f0a70d277",
+        "android_client_info": {
+          "package_name": "com.example.ilacim_cebimde"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyM8KjuerB6duA8UP2OBThHjQUX18gBPw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
